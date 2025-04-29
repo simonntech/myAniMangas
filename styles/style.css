@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root {
+    --fontLogo: "Faculty Glyphic", sans-serif;
+    --fontGeneral: "Roboto Flex", sans-serif;
+    --bgColor: #1c2235;
+    --secondColor: #3b4568;
+    --mainColor: #e7ebf5;
+    --searchBG: #dcdfe99f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bgColor);
+    font-family: var(--fontGeneral);
+}
+
+.header_back {
+    background-image: url(../assets/head_background.jpg);
+    background-size: cover;
+    background-position: top 30% center;
+}
+
+.head_cont {
+    background-image: linear-gradient(to top, var(--bgColor) 5%, transparent);
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.img_logo {
+    width: 85px;
+}
+
+.logo_text {
+    color: var(--mainColor);
+    font-family: var(--fontLogo);
+    font-size: 1.5rem;
+}
+
+.search_input {
+    background: var(--searchBG);
+    border: 2px solid var(--mainColor);
+    border-radius: 8px;
+    padding: 4px;
+    outline: none;
+    color: var(--bgColor);
+    text-align: center;
+}
+
+.search_input::placeholder{
+    color: var(--bgColor);
+}
+
+.section_home {
+    text-align: center;
+    color: var(--mainColor);
+    padding: 24px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.card {
+    width: 400px;
+    background-color: var(--searchBG);
+    padding: 14px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 1px rgba(0, 0, 0, 0.233);
+    transition: 500ms;
+}
+
+.card-title-text {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--bgColor);
+    padding: 8px;
+    font-size: 1.2rem;
+}
+
+.card-img {
+    margin: 0 -20px;
+    height: 180px;
+}
+
+.manga {
+    background-image: url(../assets/manga_background.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.anime {
+    background-image: url(../assets/anime_background.jpeg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.card-desc {
+    text-align: center;
+    padding: 12px;
+    background-color: var(--mainColor);
+    color: var(--secondColor);
+    border-radius: 0 0 8px 8px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(1.01);
+}
