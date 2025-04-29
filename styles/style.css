@@ -4,10 +4,11 @@
 :root {
     --fontLogo: "Faculty Glyphic", sans-serif;
     --fontGeneral: "Roboto Flex", sans-serif;
-    --bgColor: #1c2235;
+    --bgColor: #2a3866;
     --secondColor: #3b4568;
     --mainColor: #e7ebf5;
     --searchBG: #dcdfe99f;
+    --strongColor: #0a121b;
 }
 
 * {
@@ -16,8 +17,9 @@
 }
 
 body {
-    background-color: var(--bgColor);
+    background-image: linear-gradient(to top, var(--strongColor), var(--bgColor));
     font-family: var(--fontGeneral);
+    height: 100vh;
 }
 
 .header_back {
@@ -78,32 +80,34 @@ body {
 }
 
 .card {
-    width: 400px;
-    background-color: var(--searchBG);
-    padding: 14px;
+    width: 80vw;
+    background-color: var(--mainColor);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 1px rgba(0, 0, 0, 0.233);
-    transition: 500ms;
+    transition: 250ms;
+}
+
+.card-title {
+    background-color: var(--strongColor);
 }
 
 .card-title-text {
     text-align: center;
     text-transform: uppercase;
-    color: var(--bgColor);
-    padding: 8px;
+    color: var(--mainColor);
     font-size: 1.2rem;
+    padding: 8px;
 }
 
 .card-img {
     margin: 0 -20px;
-    height: 180px;
+    height: 130px;
 }
 
 .manga {
     background-image: url(../assets/manga_background.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center 30%;
 }
 
 .anime {
@@ -115,16 +119,11 @@ body {
 .card-desc {
     text-align: center;
     padding: 12px;
-    background-color: var(--mainColor);
     color: var(--secondColor);
     border-radius: 0 0 8px 8px;
 }
 
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
 .card:active {
-    transform: scale(1.01);
+    transform: scale(1.08);
+    box-shadow: 0 3px 4px black;
 }
