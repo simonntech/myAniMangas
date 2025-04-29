@@ -17,7 +17,7 @@
 }
 
 body {
-    background-image: linear-gradient(to top, var(--strongColor), var(--bgColor));
+    background-image: linear-gradient(to top, var(--strongColor), var(--bgColor) 25%);
     font-family: var(--fontGeneral);
     height: 100vh;
 }
